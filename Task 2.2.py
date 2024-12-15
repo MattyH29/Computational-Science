@@ -69,7 +69,7 @@ def GompertzModel(k, M, t):
         
         # Identifies if the model reaches a steady state
         P = (N/M) * 100
-        if(P > 99.99):
+        if(P > 97):
             break
 
 
