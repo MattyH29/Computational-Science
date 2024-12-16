@@ -68,11 +68,10 @@ for i in range(11,21):
     xtimeplot.append(i)
     time_to_steady_state(N0, k, M, t)
 
-plt.plot(xtimeplot, ytimeplot, label='Tumor Growth', color='blue')
-plt.title("Time for Gompertz Model to Reach Steady State with Differing Maximum Carry Capacities")
-plt.xlabel("Maximum Carry Capacity (10^)")
+plt.plot(xtimeplot, ytimeplot, color='blue')
+plt.title("Time for Gompertz Model to Reach Steady State with Differing Maximum Carrying Capacities")
+plt.xlabel("Maximum Carrying Capacity (10^)")
 plt.ylabel("Time (days)")
-plt.legend()
 plt.grid(True)
 plt.show()
 
