@@ -88,12 +88,15 @@ for step in range(steps+1):
             Yrand = getRand()
             Zrand = getRand()
             x_direction, y_direction = move(Xrand,Yrand,Zrand)
+            # Check the values are in grid range
             new_x, new_y = x_current + x_direction, y_current + y_direction
-
-            # Grow if the plot has not already been infected
-            if grid[new_x, new_y] == 0:
-                new_cells.append((new_x,new_y))
-                grid[new_x,new_y] = 1
+            if new_x == grid_size or new_x == 0 or new_y == grid_size or new_y == 0:
+                continue
+            else:
+                # Grow if the plot has not already been infected
+                if grid[new_x, new_y] == 0:
+                    new_cells.append((new_x,new_y))
+                    grid[new_x,new_y] = 1
     active_cells.extend(new_cells)
 
     # Display tumor at different stages of growth 
